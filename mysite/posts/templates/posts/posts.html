@@ -1,0 +1,13 @@
+{% extends 'base.html'  %}
+
+{% block body %}
+<div id="content">
+  <h2>Posts</h2>
+  <h5>Here you will find a few things I'm interested in, my journey as a Software Developer and some projects I am working on. </h5>
+  <div class="line"></div>
+    {% for post in object_list %}
+      <h5>{{ post.date|date:"d-m-Y" }}<a href="/posts/{{post.id}}"> {{post.title}}</a></h5>
+      <div class="line"></div>
+    {% endfor %}
+    </div>
+{% endblock %}
